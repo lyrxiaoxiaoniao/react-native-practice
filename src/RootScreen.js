@@ -54,11 +54,12 @@ class RootScene extends Component<{}> {
 const Tab = createBottomTabNavigator(
   {
     Home: {
-      screen: createStackNavigator({
-        Home: {
-          screen: HomeScreen
-        }
-      }),
+      screen: HomeScreen,
+      // screen: createStackNavigator({
+      //   Home: {
+      //     screen: HomeScreen
+      //   }
+      // }),
       navigationOptions: ({ navigation }) => ({
         tabBarLabel: '首页',
         tabBarIcon: ({ focused, tintColor }) => (
@@ -162,9 +163,9 @@ const Navigator = createStackNavigator(
     tab: {
       screen: Tab
     },
-    SecondScreen: createStackNavigator({
+    SecondScreen: {
       screen: ScreenTEst
-    })
+    }
   }, //指定界面 ，本例有两个界面HomeScreen，SecondScreen
   {
     initialRouteName: 'tab', //设置默认页面，不写默认第一个
