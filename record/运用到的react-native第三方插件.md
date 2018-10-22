@@ -20,4 +20,6 @@ http://lib.csdn.net/article/reactnative/62834?knId=1412
 
 **7. react-native-snap-carousel是可以实现复杂效果的轮播图库 `(npm install react-native-snap-carousel --save)`** 
 
-**7. react-native-textinput-effects炫酷的textInput `(npm install react-native-textinput-effects --save)`** 
+**8. react-native-textinput-effects炫酷的textInput `(npm install react-native-textinput-effects --save)`**
+
+**9. react-native-swipe-list-view 列表组件 `(npm install react-native-swipe-list-view --save)`** 

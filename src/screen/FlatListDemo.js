@@ -67,12 +67,17 @@ export default class HomeScreen extends Component {
       </View>
     );
   }
+  extraUniqueKey(item, index) {
+    return 'index' + index + item;
+  }
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <FlatList
           data={this.state.dataArray}
+          numColumns={3}
+          keyExtractor={this.extraUniqueKey}
           renderItem={data => this._renderItem(data)}
           // refreshing={this.state.isLoading}
           // onRefresh={() => {
@@ -107,6 +112,7 @@ const styles = StyleSheet.create({
     paddingTop: 15
   },
   item: {
+    flex: 1,
     backgroundColor: '#06C1AE',
     height: 200,
     marginRight: 15,

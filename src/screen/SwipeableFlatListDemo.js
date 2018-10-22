@@ -35,7 +35,7 @@ export default class HomeScreen extends Component {
   };
   /**
    * 是否加载新数据
-   * @param {Boolean} refreshing 
+   * @param {Boolean} refreshing
    */
   loadData(refreshing) {
     if (refreshing) {
@@ -60,7 +60,7 @@ export default class HomeScreen extends Component {
   }
   /**
    * 列表Item函数
-   * @param {Object} data 
+   * @param {Object} data
    */
   _renderItem(data) {
     return (
@@ -98,12 +98,16 @@ export default class HomeScreen extends Component {
       </View>
     );
   }
+  extraUniqueKey(item, index) {
+    return 'index' + index + item;
+  }
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <SwipeableFlatList
           data={this.state.dataArray}
+          keyExtractor={this.extraUniqueKey}
           renderItem={data => this._renderItem(data)}
           // refreshing={this.state.isLoading}
           // onRefresh={() => {
@@ -127,7 +131,7 @@ export default class HomeScreen extends Component {
             this.loadData();
           }}
           renderQuickActions={() => this._genQuickActions()}
-          maxSwipeDistance={100}
+          maxSwipeDistance={80}
           bounceFirstRowOnMount={false}
         />
       </View>
@@ -166,9 +170,9 @@ const styles = StyleSheet.create({
   quitText: {
     backgroundColor: 'red',
     flex: 1,
-    alignItems: 'flex-end',
+    alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
-    width: 100
+    width: 80
   }
 });

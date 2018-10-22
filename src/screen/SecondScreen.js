@@ -2,12 +2,14 @@
 
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
-
+import Storage from '../utils/storage';
 export default class SecondScreen extends Component {
   static navigationOptions = {
     //设置SecondScreen界面的title、导航条样式
-    title: '附近',
+    title: '附近'
   };
+  componentDidMount = () => {};
+
   render() {
     const { navigate } = this.props.navigation;
     const { params } = this.props.navigation.state; //接收参数

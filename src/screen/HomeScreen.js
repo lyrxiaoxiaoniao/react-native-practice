@@ -2,13 +2,22 @@ import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import HeaderBar from '../common/header';
 import TextInputEffectsExample from './TestInput';
+import Storage from '../utils/storage';
 //默认页面
 export default class HomeScreen extends Component {
+  componentDidMount = () => {
+    Storage.save('login', { a: 1, b: '0' });
+  };
+
   render() {
     const { navigation } = this.props;
     return (
-      <View style={{flex: 1}}>
-        <HeaderBar title={'首页'} navigation={navigation} left={'返回'} />
+      <View style={{ flex: 1 }}>
+        <HeaderBar
+          title={'首页'}
+          navigation={navigation}
+          hideLeftArrow={true}
+        />
         <Button
           color={'#06C1AE'}
           title="Jump 附近"

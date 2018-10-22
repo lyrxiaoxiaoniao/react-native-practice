@@ -57,22 +57,22 @@ export default class MyPage extends Component {
           style={styles.bannerImg}
           resizeMode="stretch"
         /> */}
-        {images.map(v => {
-          return this._renderItem(v);
+        {images.map((v,i) => {
+          return this._renderItem(v,i);
         })}
       </Swiper>
     );
   }
 
   componentDidMount() {}
-  _renderItem(item) {
+  _renderItem(item,i) {
     return (
       // <Image
       //     source={require('../img/banner/banner2.jpg')}
       //     style={styles.bannerImg}
       //     resizeMode="stretch"
       //   />
-      <TouchableHighlight onPress={() => alert(item)}>
+      <TouchableHighlight onPress={() => alert(item)} key={i}>
         <Image
           source={{
             uri: 'http://www.szcaee.cn/data/upload/2018-02-14/5a8338711ab3f.jpg'
