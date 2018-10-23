@@ -23,3 +23,5 @@ http://lib.csdn.net/article/reactnative/62834?knId=1412
 **8. react-native-textinput-effects炫酷的textInput `(npm install react-native-textinput-effects --save)`**
 
 **9. react-native-swipe-list-view 列表组件 `(npm install react-native-swipe-list-view --save)`** 
+
+**10. react-native-app-intro 列表组件 `(npm install react-native-app-intro --save)`**  解决bug ` yarn add https://github.com/merryjs/react-native-app-intro `

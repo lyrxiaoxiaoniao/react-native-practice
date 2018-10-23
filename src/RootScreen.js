@@ -13,6 +13,7 @@ import Screen2 from './screen/Screen2';
 import ScreenTEst from './screen/Screen3';
 import Screen3 from './screen/FlatListDemo';
 import Screen4 from './screen/SwipeableFlatListDemo';
+import AppScreen from './screen/IntroScreen';
 
 const lightContentScenes = ['Home', 'Mine'];
 
@@ -160,6 +161,9 @@ const Tab = createBottomTabNavigator(
 );
 const Navigator = createStackNavigator(
   {
+    app: {
+      screen: AppScreen
+    },
     tab: {
       screen: Tab
     },
@@ -168,7 +172,7 @@ const Navigator = createStackNavigator(
     }
   }, //指定界面 ，本例有两个界面HomeScreen，SecondScreen
   {
-    initialRouteName: 'tab', //设置默认页面，不写默认第一个
+    initialRouteName: 'app', //设置默认页面，不写默认第一个
     // headerMode: 'none',
     navigationOptions: {
       header: null
