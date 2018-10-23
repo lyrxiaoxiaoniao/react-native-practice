@@ -109,14 +109,15 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15
+    paddingTop: 15,
+    paddingLeft: 15
   },
   item: {
     flex: 1,
     backgroundColor: '#06C1AE',
     height: 200,
     marginRight: 15,
-    marginLeft: 15,
+    // marginLeft: 15,
     marginBottom: 15,
     alignItems: 'center',
     justifyContent: 'center'

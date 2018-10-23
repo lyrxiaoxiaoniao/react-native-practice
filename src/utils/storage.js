@@ -3,6 +3,8 @@ import React, {
 } from 'react-native';
 
 class DeviceStorage {
+
+  // static 静态方法不会被实例继承，而是直接通过类来调用
   /**
    * 获取
    * @param key
