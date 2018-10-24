@@ -14,13 +14,34 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold'
-  }
+  },
 });
 
 export default class Example extends Component {
+  onSkipBtnHandle = index => {
+    // alert('Skip');
+    console.log(index);
+  };
+  doneBtnHandle = () => {
+    const { navigate } = this.props.navigation;
+    navigate('Home');
+  };
+  nextBtnHandle = index => {
+    // alert('Next');
+    console.log(index);
+  };
+  onSlideChangeHandle = (index, total) => {
+    console.log(index, total);
+  };
   render() {
     return (
-      <AppIntro>
+      <AppIntro
+        onNextBtnClick={this.nextBtnHandle}
+        onDoneBtnClick={this.doneBtnHandle}
+        onSkipBtnClick={this.onSkipBtnHandle}
+        onSlideChange={this.onSlideChangeHandle}
+        customStyles={{btnContainer: { flex: 1 }}}
+      >
         <View style={[styles.slide, { backgroundColor: '#fa931d' }]}>
           <View level={10}>
             <Text style={styles.text}>Page 1</Text>
@@ -65,6 +86,39 @@ export default class Example extends Component {
             <Text style={styles.text}>Page 4</Text>
           </View>
         </View>
+        {/* <View style={[styles.slide, { backgroundColor: '#a4b602' }]}>
+          <View level={5}>
+            <Text style={styles.text}>Page 5</Text>
+          </View>
+          <View level={10}>
+            <Text style={styles.text}>Page 5</Text>
+          </View>
+          <View level={15}>
+            <Text style={styles.text}>Page 5</Text>
+          </View>
+        </View>
+        <View style={[styles.slide, { backgroundColor: '#a4b602' }]}>
+          <View level={5}>
+            <Text style={styles.text}>Page 6</Text>
+          </View>
+          <View level={10}>
+            <Text style={styles.text}>Page 6</Text>
+          </View>
+          <View level={15}>
+            <Text style={styles.text}>Page 6</Text>
+          </View>
+        </View>
+        <View style={[styles.slide, { backgroundColor: '#a4b602' }]}>
+          <View level={5}>
+            <Text style={styles.text}>Page 7</Text>
+          </View>
+          <View level={10}>
+            <Text style={styles.text}>Page 7</Text>
+          </View>
+          <View level={15}>
+            <Text style={styles.text}>Page 7</Text>
+          </View>
+        </View> */}
       </AppIntro>
     );
   }

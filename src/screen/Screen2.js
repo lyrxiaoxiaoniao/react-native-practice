@@ -5,22 +5,49 @@ import {
   Button,
   Image,
   StyleSheet,
-  TouchableHighlight
+  TouchableHighlight,
+  Modal
 } from 'react-native';
 import Swiper from 'react-native-swiper';
 import HeaderBar from '../common/header';
 import { unitWidth, width } from '../utils/AdapterUtil';
+import ImageViewer from 'react-native-image-zoom-viewer';
 //默认页面
 
-const images = [
+const imagesArray = [
   'http://www.szcaee.cn/data/upload/2018-02-14/5a8338711ab3f.jpg',
   'http://www.szcaee.cn/data/upload/2018-02-14/5a8338711ab3f.jpg',
   'http://www.szcaee.cn/data/upload/2018-02-14/5a8338711ab3f.jpg',
   'http://www.szcaee.cn/data/upload/2018-02-14/5a8338711ab3f.jpg'
 ];
+
+const images = [
+  {
+    // Simplest usage.
+    url: 'https://avatars2.githubusercontent.com/u/7970947?v=3&s=460',
+
+    // width: number
+    // height: number
+    // Optional, if you know the image size, you can set the optimization performance
+
+    // You can pass props to <Image />.
+    props: {
+      // headers: ...
+    }
+  },
+  {
+    props: {
+      // Or you can set source directory.
+      source: require('../img/banner/banner2.jpg')
+    }
+  }
+];
 export default class MyPage extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isShow: false
+    };
   }
   // 轮播图
   renderBanner() {
@@ -57,22 +84,23 @@ export default class MyPage extends Component {
           style={styles.bannerImg}
           resizeMode="stretch"
         /> */}
-        {images.map((v,i) => {
-          return this._renderItem(v,i);
+        {imagesArray.map((v, i) => {
+          return this._renderItem(v, i);
         })}
       </Swiper>
     );
   }
-
-  componentDidMount() {}
-  _renderItem(item,i) {
+  _renderItem(item, i) {
     return (
       // <Image
       //     source={require('../img/banner/banner2.jpg')}
       //     style={styles.bannerImg}
       //     resizeMode="stretch"
       //   />
-      <TouchableHighlight onPress={() => alert(item)} key={i}>
+      <TouchableHighlight
+        onPress={() => this.setState({ isShow: true })}
+        key={i}
+      >
         <Image
           source={{
             uri: 'http://www.szcaee.cn/data/upload/2018-02-14/5a8338711ab3f.jpg'
@@ -83,13 +111,32 @@ export default class MyPage extends Component {
       </TouchableHighlight>
     );
   }
-
+  CancelImages = () => {
+    this.setState({ isShow: false });
+  };
+  _renderImagesZoom() {
+    return (
+      <Modal
+        visible={this.state.isShow}
+        transparent={true}
+        onRequestClose={this.CancelImages}
+      >
+        <ImageViewer
+          onCancel={this.CancelImages}
+          enableSwipeDown={true}
+          imageUrls={images}
+          onClick={this.CancelImages}
+        />
+      </Modal>
+    );
+  }
   render() {
     const { navigation } = this.props;
     return (
       <View style={styles.container}>
-        <HeaderBar title={'订单页面'} navigation={navigation} left={'返回'}/>
+        <HeaderBar title={'订单页面'} navigation={navigation} left={'返回'} />
         <View style={styles.BannerContainer}>{this.renderBanner()}</View>
+        {this._renderImagesZoom()}
       </View>
     );
   }

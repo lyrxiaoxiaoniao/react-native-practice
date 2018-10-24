@@ -12,7 +12,7 @@ http://lib.csdn.net/article/reactnative/62834?knId=1412
 
 **3. 轮播图 react-native-swiper `(npm install react-native-swiper --save)`**  https://www.jianshu.com/p/18998d248062   https://blog.csdn.net/teagreen_red/article/details/78116638
 
-**4. 是一个图片大图浏览的库，点击图片可以放大缩小 `(npm install react-native-image-viewer --save)`** 
+**4. 是一个图片大图浏览的库，点击图片可以放大缩小 `(npm install react-native-image-zoom-viewer --save)`** 
 
 **5. react-native-image-picker是实现多个图像选择、裁剪、压缩等功能的第三方库，可以使用该库实现图片、照相等操作。 `(npm install react-native-image-picker --save)`** 
 
