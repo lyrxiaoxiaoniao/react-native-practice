@@ -4261,6 +4261,12 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-native-action-button@^2.8.5:
+  version "2.8.5"
+  resolved "http://registry.npm.taobao.org/react-native-action-button/download/react-native-action-button-2.8.5.tgz#4152a50323a8a6b3468e6f161f9a9071f2f0739a"
+  dependencies:
+    prop-types "^15.5.10"
+
 "react-native-app-intro@https://github.com/merryjs/react-native-app-intro":
   version "1.1.5"
   resolved "https://github.com/merryjs/react-native-app-intro#b5bbdbbd8ff8be0842d22c77a9d857cc30e413d8"

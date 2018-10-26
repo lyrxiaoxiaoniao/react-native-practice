@@ -16,7 +16,7 @@ http://lib.csdn.net/article/reactnative/62834?knId=1412
 
 **5. react-native-image-picker是实现多个图像选择、裁剪、压缩等功能的第三方库，可以使用该库实现图片、照相等操作。 `(npm install react-native-image-picker --save)`** 
 
-**6. react-native-app-intro是实现引导页的库 `(npm install react-native-app-intro --save)`** 
+**6. react-native-action-button 悬浮菜单按钮`(npm i react-native-action-button --save)`** 
 
 **7. react-native-snap-carousel是可以实现复杂效果的轮播图库 `(npm install react-native-snap-carousel --save)`** 
 
@@ -24,4 +24,5 @@ http://lib.csdn.net/article/reactnative/62834?knId=1412
 
 **9. react-native-swipe-list-view 列表组件 `(npm install react-native-swipe-list-view --save)`** 
 
-**10. react-native-app-intro 引导页 `(npm install react-native-app-intro --save)`**  解决bug ` yarn add https://github.com/merryjs/react-native-app-intro `
+**10. react-native-app-intro 是实现引导页的库 `(npm install react-native-app-intro --save)`**  解决bug ` yarn add https://github.com/merryjs/react-native-app-intro `
+

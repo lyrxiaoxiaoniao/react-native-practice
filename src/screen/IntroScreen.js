@@ -20,6 +20,8 @@ const styles = StyleSheet.create({
 export default class Example extends Component {
   onSkipBtnHandle = index => {
     // alert('Skip');
+    const { navigate } = this.props.navigation;
+    navigate('Home');
     console.log(index);
   };
   doneBtnHandle = () => {
