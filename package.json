@@ -11,7 +11,7 @@
     "react-native": "0.57.2",
     "react-native-app-intro": "https://github.com/merryjs/react-native-app-intro",
     "react-native-image-zoom-viewer": "^2.2.23",
-    "react-native-scrollable-tab-view": "git+https://github.com/happypancake/react-native-scrollable-tab-view.git",
+    "react-native-scrollable-tab-view": "^0.9.0",
     "react-native-swiper": "^1.5.13",
     "react-native-tab-navigator": "^0.3.4",
     "react-native-textinput-effects": "^0.4.2",

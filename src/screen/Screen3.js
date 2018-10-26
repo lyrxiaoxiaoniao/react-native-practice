@@ -20,7 +20,7 @@ export default class Screen3 extends Component {
     const { navigation } = this.props;
     return (
       <View style={{ flex: 1 }}>
-        <HeaderBar title={'tabBar'} navigation={navigation} left={'返回'}/>
+        <HeaderBar title={'tabBar'} navigation={navigation} left={'返回'} />
         <ScrollableTabView
           renderTabBar={() => (
             <CustomTabBar
@@ -54,6 +54,7 @@ export default class Screen3 extends Component {
           <Text tabLabel="project">project</Text>
         </ScrollableTabView>
         <ScrollableTabView
+          page={0}
           renderTabBar={() => <ScrollableTabBar />}
           tabBarBackgroundColor="#fff"
           tabBarActiveTextColor="#06C1AE"
