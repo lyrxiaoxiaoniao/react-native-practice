@@ -86,39 +86,6 @@ export default class Example extends Component {
             <Text style={styles.text}>Page 4</Text>
           </View>
         </View>
-        {/* <View style={[styles.slide, { backgroundColor: '#a4b602' }]}>
-          <View level={5}>
-            <Text style={styles.text}>Page 5</Text>
-          </View>
-          <View level={10}>
-            <Text style={styles.text}>Page 5</Text>
-          </View>
-          <View level={15}>
-            <Text style={styles.text}>Page 5</Text>
-          </View>
-        </View>
-        <View style={[styles.slide, { backgroundColor: '#a4b602' }]}>
-          <View level={5}>
-            <Text style={styles.text}>Page 6</Text>
-          </View>
-          <View level={10}>
-            <Text style={styles.text}>Page 6</Text>
-          </View>
-          <View level={15}>
-            <Text style={styles.text}>Page 6</Text>
-          </View>
-        </View>
-        <View style={[styles.slide, { backgroundColor: '#a4b602' }]}>
-          <View level={5}>
-            <Text style={styles.text}>Page 7</Text>
-          </View>
-          <View level={10}>
-            <Text style={styles.text}>Page 7</Text>
-          </View>
-          <View level={15}>
-            <Text style={styles.text}>Page 7</Text>
-          </View>
-        </View> */}
       </AppIntro>
     );
   }
