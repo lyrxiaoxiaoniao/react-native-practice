@@ -1,6 +1,6 @@
 ## react-naitve 开发填坑
 
-### 1. 错误代码-------解决办法one tab（`react-native start --reset-cache`）,one tab (`react-native run-android`)
+### 1. 错误代码-------解决办法one tab（`react-native start --reset-cache`）,one tab (`react-native run-android`| `react-native run-ios`)
 ```
   error: bundling failed: Error: Unable to resolve module ./../react-transform-hmr/lib/index.js from /Users/andrariztyan/MyProject/mobile/myapp/App.js: The module ./../react-transform-hmr/lib/index.js
 
